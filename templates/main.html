@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data School</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="navbar">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a>Home Page</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Algorithms</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{ url_for('decision_tree_page') }}">Decision Tree</a></li>
+                            <li><a href="{{ url_for('knn_page') }}">KNN</a></li>
+                            <li><a href="{{ url_for('svm_page') }}">SVM</a></li>
+                            <li><a href="{{ url_for('kmeans_page') }}">K-Means</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('about_us_page') }}">About Us</a></li>
+                    <li><a href="{{ url_for('contact_us_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="slideshow-wrapper">
+        <div class="control left-arrow">
+            <div class="arrow">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+            </div>
+        </div>
+        <div class="slides">
+            <div class="slide slide-1">
+                <img src="{{ url_for('static', filename='decision-tree.jpg') }}" alt="Decision Tree">
+            </div>
+            <div class="slide slide-2">
+                <img src="{{ url_for('static', filename='SVM.jpg') }}" alt="SVM">
+            </div>
+            <div class="slide slide-3">
+                <img src="{{ url_for('static', filename='KNN.jpg') }}" alt="KNN">
+            </div>
+            <div class="slide slide-4">
+                <img src="{{ url_for('static', filename='KMEANS.jpg') }}" alt="Kmeans">
+            </div>
+        </div>
+        <div class="control right-arrow">
+            <div class="arrow">
+                <div class="line line-3"></div>
+                <div class="line line-4"></div>
+            </div>
+        </div>
+        <div class="play-pause">
+            <i class="fas fa-play"></i>
+        </div>
+    </div>
+    <section id="features">
+        <div class="title-text">
+            <p>Description of Algorithms</p>
+            <h1>Decision Tree</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>What is a Decision Tree?</h1>
+                <p>A decision tree is a decision tree that uses a series of questions and conditions to make predictions or decisions. This algorithm is used in machine learning and is built as a decision tree, each node of which has a question related to the input features, and each edge is an answer to that question. Finally, by asking questions and making decisions based on attributes, the decision tree reaches final decisions.</p>
+            </div>
+            <div class="features-img">
+                <img src="{{ url_for('static', filename='decision_tree (2).jpg') }}" alt="Decision Tree">
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="title-text">
+            <p>Description of Algorithms</p>
+            <h1>Support Vector Machine(SVM)</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>What is a Support Vector Machine(SVM)?</h1>
+                <p>A Support Vector Machine (SVM) is a supervised machine learning algorithm used for classification and regression tasks. Its primary objective is to find the optimal hyperplane that best separates data points of different classes in a high-dimensional space. SVM achieves this by maximizing the margin, which is the distance between the hyperplane and the nearest data points (called support vectors) of each class. By doing so, SVM is robust to overfitting and can handle complex datasets. It works by mapping input data points into a higher-dimensional feature space using a kernel function, allowing it to find nonlinear decision boundaries. SVM is widely used in various applications such as text categorization, image classification, and bioinformatics due to its effectiveness and versatility.</p>
+            </div>
+            <div class="features-img">
+                <img src="{{ url_for('static', filename='ssvm.png') }}" alt="SVM">
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="title-text">
+            <p>Description of Algorithms</p>
+            <h1>K Nearest Neighbours(KNN)</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>What is a K Nearest Neighbours(KNN)?</h1>
+                <p>The K-Nearest Neighbors (KNN) algorithm is a machine learning algorithm for classification and regression problems. In this algorithm, to predict the label or value of a new point, first the K closest points to that point in the feature space (input space) are selected. Then based on the majority of neighboring points' labels or values, the new point's label or value is estimated. This algorithm uses a simple idea to estimate the label or value of new points and is used in many application areas including pattern recognition, item sorting, and predictions.</p>
+            </div>
+            <div class="features-img">
+                <img src="{{ url_for('static', filename='knn-1.gif') }}" alt="KNN">
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="title-text">
+            <p>Description of Algorithms</p>
+            <h1>A centroid-based algorithm(K-MEANS)</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>What is a centroid-based algorithm(K-MEANS)?</h1>
+                <p>K-Means is a centroid-based algorithm used for clustering data into 'k' distinct groups. It begins by randomly placing 'k' centroids in the feature space. Then, each data point is assigned to the nearest centroid, forming clusters. The centroids are recalculated as the mean of the data points in each cluster, and the process iterates until convergence. K-Means aims to minimize the within-cluster sum of squared distances. While efficient and scalable, it may converge to local optima and struggle with irregularly shaped clusters.</p>
+            </div>
+            <div class="features-img">
+                <img src="{{ url_for('static', filename='k-means.png') }}" alt="Kmeans">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="title-text">
+            <p>CONTACT US</p>
+            <h1>Data School</h1>
+        </div>
+        <div class="footer-row">
+            <div class="footer-left">
+                <h1>Get in Touch</h1>
+                <p>Urmia</p>
+                <p>Email: llhadisehll@gmail.com</p>
+            </div>
+            <div class="footer-right">
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
